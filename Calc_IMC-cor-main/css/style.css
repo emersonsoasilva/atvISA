@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    background: linear-gradient(to bottom, orange, yellow);
+    background-color: orangered;
     min-height: 100vh;
   }
 
@@ -42,14 +42,14 @@ body {
 
 .main-index-color {
     width: 50%;
-    height: 250px;
+    height: 380px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-top: 100px;
 
 }
 
 
-.input-color {
+.input-group {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +57,7 @@ body {
     flex-wrap: nowrap;
 }
 
-.input-color input{
+.input-group input{
     height: 45px;
     width: 87%;
     padding-bottom: 50px;
@@ -72,15 +72,10 @@ body {
 
 }
 
-
 .btn-change-color {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
 }
-
 .btn-change-color button{
     border: none;
     border-radius: 30px;
@@ -88,7 +83,7 @@ body {
     margin-top: 20px;
     height: 45px;
     width: 87%;
-    background: orangered;
+    background-color: orange;
 }
 
 .color-buttons {
@@ -105,5 +100,114 @@ body {
     font-size: 15px;
     width: 90px;
     height: 25px;
+    background: orange;
+}
+
+/* IMC */
+
+.main-index-imc {
+    width: 50%;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 100px;
+
+}
+
+.input-imc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.input-imc input{
+    height: 45px;
+    width: 87%;
+    padding-bottom: 50px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgba(255,255,255,0.1);
+    outline: none;
+
+}
+
+.imc-btn {
+
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.imc-btn button {
+    border: none;
+    padding-right: 10px;
+    border-radius: 30px;
+    font-size: 15px;
+    width: 90px;
+    height: 25px;
     background: orangered;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    
+}
+
+/* Home */
+
+.func-options-btn {
+    width: 50%;
+    height: 380px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.func-options-btn button {
+    border: none;
+    padding-right: 10px;
+    border-radius: 30px;
+    font-size: 15px;
+    margin-top: 10px;
+    width: 90px;
+    height: 25px;
+    background: orange;
+}
+
+/* Exit */
+
+.main-button-exit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.main-button-exit button {
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    margin-top: 30px;
+    width: 90px;
+    height: 25px;
+    background: orange;
+}
+
+a {
+    text-decoration: none;
 }

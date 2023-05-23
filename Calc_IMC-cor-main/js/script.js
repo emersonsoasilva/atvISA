@@ -12,55 +12,53 @@ function abrirCalculadoraIMC() {
 
 function alterarCor(cor) {
   if (cor) {
-      document.body.style.backgroundColor = cor;
+    document.body.style.backgroundColor = cor;
   } else {
-      const nameColorInput = document.getElementById('name-color-input');
-      const hexColorInput = document.getElementById('hex-color-input');
-      const nameColor = nameColorInput.value;
-      const hexColor = hexColorInput.value;
+    const nomeCorInput = document.getElementById('nomeCorInput');
+    const codigoCorInput = document.getElementById('codigoCorInput');
+    const nomeCor = nomeCorInput.value;
+    const codigoCor = codigoCorInput.value;
 
-      if (hexColor) {
-          document.body.style.backgroundColor = hexColor;
-      } else if (nameColor) {
-          document.body.style.backgroundColor = nameColor;
-      }
+    if (codigoCor) {
+      document.body.style.backgroundColor = codigoCor;
+    } else if (nomeCor) {
+      document.body.style.backgroundColor = nomeCor;
+    }
   }
 }
 
+// IMC
 
-// Calculadora IMC
+function calcularIMC() {
+  const alturaInput = document.getElementById('altura');
+  const pesoInput = document.getElementById('peso');
+  const resultadoDiv = document.getElementById('resultado');
 
-let calculateButtonIMC = document.getElementById("button-calculate");
+  const altura = alturaInput.value / 100; // Converter para metros
+  const peso = pesoInput.value;
 
+  if (altura && peso) {
+      const imc = peso / (altura * altura);
+      const classificacao = getClassificacaoIMC(imc);
 
-calculateButtonIMC.addEventListener("click", function () {
-  let peso = document.getElementById("peso").value;
-  let altura = document.getElementById("altura").value;
-
-  if (peso == "" && altura == "") {
-    document.getElementById("result").innerHTML =
-      "Por favor, preencha todos os campos.";
-    return;
-  }
-
-  let alturaMetros = altura / 100;
-  let imc = peso / (alturaMetros * alturaMetros);
-  let mensagem;
-
-  if (imc < 18.5) {
-    mensagem = "Abaixo do peso";
-  } else if (imc < 25) {
-    mensagem = "Peso normal";
-  } else if (imc < 30) {
-    mensagem = "Sobrepeso";
-  } else if (imc < 35) {
-    mensagem = "Obesidade grau I";
-  } else if (imc < 40) {
-    mensagem = "Obesidade grau II"
+      resultadoDiv.innerHTML = `Seu IMC é ${imc.toFixed(2)} (${classificacao})`;
   } else {
-    mensagem = "Obesidade grau III (Obesidade mórbida)"
+      resultadoDiv.innerHTML = 'Por favor, preencha a altura e o peso corretamente.';
   }
+}
 
-  document.getElementById("result").innerHTML =
-    "Seu IMC é " + imc.toFixed(2) + "<br>" + mensagem;
-});
+function getClassificacaoIMC(imc) {
+  if (imc < 18.5) {
+      return 'Abaixo do peso';
+  } else if (imc < 25) {
+      return 'Peso normal';
+  } else if (imc < 30) {
+      return 'Sobrepeso';
+  } else if (imc < 35) {
+      return 'Obesidade Grau I';
+  } else if (imc < 40) {
+      return 'Obesidade Grau II';
+  } else {
+      return 'Obesidade Grau III';
+  }
+}

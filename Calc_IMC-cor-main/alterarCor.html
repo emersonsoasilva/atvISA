@@ -12,29 +12,28 @@
 </head>
 <body>
     <main class="main-index">
-        <!-- <div class="main-button-exit">
-            <button class="button-exit"><a href="login.html">Sair</a></button>
-        </div> -->
         <div class="main-index-container">
             <div class="main-index-header">
                 <h1>Alterar Cor de Fundo</h1>
             </div>
+            <div class="main-button-exit">
+                <button class="button-exit"><a href="home.html">Sair</a></button>
+            </div>  
             <div class="main-index-color">
-                    <div class="input-color">
-                        <input type="text" id="name-color-input" placeholder="Cor [Inglês]">
-                        <input type="text" id="hex-color-input" placeholder="Hexadecimal">
+                    <div class="input-group">
+                        <input type="text" id="nomeCorInput" placeholder="Digite o nome da cor (Inglês)">
+                        <input type="text" id="codigoCorInput" placeholder="Digite o código da cor">
                     </div>
                     <div class="btn-change-color">
                         <button onclick="alterarCor()">Alterar</button>
                     </div>
                     
                     <div class="color-buttons">
-                        <button class="color-button1" onclick="alterarCor('white')">Branco</button>
+                        <button class="color-button1" onclick="alterarCor('blue')">Azul</button>
                         <button class="color-button2" onclick="alterarCor('red')">Vermelho</button>
-                        <button class="color-button3" onclick="alterarCor('black')">Preto</button>
+                        <button class="color-button3" onclick="alterarCor('purple')">Roxo</button>
                     </div>
-                </div>
-            </div>   
+            </div>
         </div>    
 
     </main>
