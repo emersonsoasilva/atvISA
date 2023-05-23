@@ -14,15 +14,15 @@ function alterarCor(cor) {
   if (cor) {
       document.body.style.backgroundColor = cor;
   } else {
-      const nomeCorInput = document.getElementById('nomeCorInput');
-      const codigoCorInput = document.getElementById('codigoCorInput');
-      const nomeCor = nomeCorInput.value;
-      const codigoCor = codigoCorInput.value;
+      const nameColorInput = document.getElementById('name-color-input');
+      const hexColorInput = document.getElementById('hex-color-input');
+      const nameColor = nameColorInput.value;
+      const hexColor = hexColorInput.value;
 
-      if (codigoCor) {
-          document.body.style.backgroundColor = codigoCor;
-      } else if (nomeCor) {
-          document.body.style.backgroundColor = nomeCor;
+      if (hexColor) {
+          document.body.style.backgroundColor = hexColor;
+      } else if (nameColor) {
+          document.body.style.backgroundColor = nameColor;
       }
   }
 }
