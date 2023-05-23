@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Multi-função</title>
+</head>
+
+<body>
+    <main class="box-login">
+        <div class="container">
+            <div class="top">
+                <header>Login</header>
+            </div>
+            <div class="content-login">
+                    <form id="form-login">
+                        <div class="input-field">
+                            <div class="label-input">
+                                <input type="text" class="input" placeholder="Usuário" id="text">
+                                <i class='bx bx-user' ></i>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <div class="label-input">
+                                <input type="password" class="input" placeholder="Senha" id="password">
+                                <i class='bx bx-lock-alt'></i>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <input type="submit" class="submit" value="Login" id="button-login">
+                            <div id="mensage-error"></div>
+                            <div class="two-col">
+                                <div class="one">
+                                   <input type="checkbox" name="" id="check">
+                                   <label for="check">Lembre-me</label>
+                                </div>
+                                <div class="two">
+                                    <label><a href="login.html">Esqueceu a senha? Clique aqui</a></label>
+                                </div>
+                        </div>
+                        </div>     
+                    </form>
+            </div>
+        </div>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+</html>
